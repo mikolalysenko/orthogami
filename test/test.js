@@ -5,13 +5,13 @@ var unfold = require('../index')
 var fs = require('fs')
 
 var cube = ndpack([
+[ [5,5,5,5],
+  [5,0,5,5],
+  [5,5,0,5],
+  [5,5,5,5] ],
 [ [0,0,0,0],
   [0,0,0,0],
   [0,0,0,0],
-  [0,0,0,0] ],
-[ [0,0,0,0],
-  [0,1,2,0],
-  [0,0,3,0],
   [0,0,0,0] ],
 [ [0,0,0,0],
   [0,0,0,0],
@@ -23,6 +23,7 @@ var cube = ndpack([
   [0,0,0,0] ]])
 
 unfold(cube).map(function(svg, idx) {
+  console.log("data:", idx, "--:")
   console.log(svg)
   fs.writeFileSync("page" + idx + ".svg", svg)
 })
