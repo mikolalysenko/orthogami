@@ -1,0 +1,47 @@
+{
+  "name": "orthogami",
+  "version": "1.0.0",
+  "description": "Turn voxel models into papercraft",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "boxpack": "0.1.0",
+    "contour-2d": "^1.0.0",
+    "interval-tree-1d": "^1.0.0",
+    "ndarray-ops": "^1.2.2",
+    "ndarray": "^1.0.15",
+    "signum": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/orthogami.git"
+  },
+  "keywords": [
+    "orthogonal",
+    "polyhedra",
+    "origami",
+    "orthogami",
+    "voxel",
+    "papercraft",
+    "unfold",
+    "folding",
+    "scissor",
+    "glue",
+    "maker",
+    "make",
+    "printing"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/orthogami/issues"
+  },
+  "homepage": "https://github.com/mikolalysenko/orthogami"
+}
