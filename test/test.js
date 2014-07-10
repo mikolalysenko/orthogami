@@ -22,7 +22,7 @@ var cube = ndpack([
   [0,0,0,0],
   [0,0,0,0] ]])
 
-unfold(cube).map(function(svg, idx) {
+unfold(cube, {bounds: [1000, 500]}).map(function(svg, idx) {
   console.log("data:", idx, "--:")
   console.log(svg)
   fs.writeFileSync("page" + idx + ".svg", svg)

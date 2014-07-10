@@ -6,6 +6,7 @@ var getFaces = require('./lib/faces')
 var getLinks = require('./lib/topo')
 var unfold = require('./lib/unfold')
 var render = require('./lib/render')
+var combinePieces = require('./lib/pack')
 
 module.exports = orthogami
 
@@ -66,13 +67,14 @@ function orthogami(voxels, options) {
   }
 
   //Page size bounds and scaling parameters
-  var bounds = options.bounds || [Infinity, Infinity]
+  var boxSize = options.bounds || [Infinity, Infinity]
   var scale = options.scale || [64, 64]
   if(typeof scale === 'number') {
     scale = [scale, scale]
   }
+  var bounds = [0,0]
   for(var i=0; i<2; ++i) {
-    bounds[i] = Math.ceil(bounds[i] / scale[i] - 2)
+    bounds[i] = Math.floor(boxSize[i] / scale[i] - 2)
   }
 
   //Extract faces/normals from mesh
@@ -87,7 +89,7 @@ function orthogami(voxels, options) {
   var unwrapped   = unfold(faces, links, normals, bounds)
 
   //Render to SVG
-  return unwrapped.map(function(unfolding) {
+  var pieces = unwrapped.map(function(unfolding) {
     return render(
       padded,
       colorMap,
@@ -99,4 +101,7 @@ function orthogami(voxels, options) {
       scale,
       options)
   })
+
+  //Pack pieces into sheets
+  return combinePieces(pieces, boxSize, scale)
 }
