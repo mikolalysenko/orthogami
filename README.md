@@ -43,11 +43,11 @@ svgs.forEach(function(svg, idx) {
 
 #### Page 1:
 
-<img href="https://mikolalysenko.github.io/orthogami/example/page0.svg">
+<img src="https://mikolalysenko.github.io/orthogami/example/page0.svg">
 
 #### Page 2:
 
-<img href="https://mikolalysenko.github.io/orthogami/example/page1.svg">
+<img src="https://mikolalysenko.github.io/orthogami/example/page1.svg">
 
 ## Install
 
