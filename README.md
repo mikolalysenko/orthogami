@@ -1,6 +1,8 @@
 orthogami
 =========
-Voxel origami generator.  Works in node.js and browserify
+Voxel origami generator.  Works in node.js and browserify.
+
+<img src="https://mikolalysenko.github.io/orthogami/example/mario.svg">
 
 ## Example usage
 
@@ -41,8 +43,11 @@ svgs.forEach(function(svg, idx) {
 
 #### Page 1:
 
+<img href="https://mikolalysenko.github.io/orthogami/example/page0.svg">
+
 #### Page 2:
 
+<img href="https://mikolalysenko.github.io/orthogami/example/page1.svg">
 
 ## Install
 
