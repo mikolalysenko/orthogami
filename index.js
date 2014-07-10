@@ -56,9 +56,11 @@ function orthogami(voxels, options) {
 
   //Page size bounds and scaling parameters
   var boxSize = options.bounds || [Infinity, Infinity]
-  var scale = options.scale || [64, 64]
+  var scale = options.scale || 64
   if(typeof scale === 'number') {
     scale = [scale, scale]
+  } else {
+    scale = [64, 64]
   }
   var bounds = [0,0]
   for(var i=0; i<2; ++i) {
