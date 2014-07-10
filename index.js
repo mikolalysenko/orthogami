@@ -12,13 +12,13 @@ module.exports = orthogami
 
 var palette = [
   'magenta',
-  'red',
-  'green',
   'blue',
-  'gold',
+  'green',
   'purple',
-  'tomato',
-  'turquoise',
+  'gold',
+  'red',
+  'bisque',
+  'brown',
   'darkblue',
   'goldenrod',
   'aquamarine',
@@ -39,14 +39,6 @@ function defaultColorMap(v) {
   return palette[(v>>>0)%palette.length]
 }
 
-function intColorMap(x) {
-  var y = x.toString(16)
-  while(y.length < 6) {
-    y = '0' + y
-  }
-  return '#' + y
-}
-
 function orthogami(voxels, options) {
   options = options || {}
 
@@ -59,11 +51,7 @@ function orthogami(voxels, options) {
   if(typeof colorMap === 'object') {
     colorMap = createColorMap(colorMap)
   } else if(typeof colorMap !== 'function') {
-    if(voxels.dtype === 'uint32' || voxels.dtype === 'int32') {
-      colorMap = intColorMap
-    } else {
-      colorMap = defaultColorMap
-    }
+    colorMap = defaultColorMap
   }
 
   //Page size bounds and scaling parameters
