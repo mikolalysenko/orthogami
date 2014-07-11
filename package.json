@@ -1,6 +1,6 @@
 {
   "name": "orthogami",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn voxel models into papercraft",
   "main": "index.js",
   "directories": {
