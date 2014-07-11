@@ -25,7 +25,7 @@ var options = {
   scale: 50,            //Size of each voxel face
   colorMap: ['black', 'red', 'green', 'blue', 'yellow'], //Colors (can be a function)
   convexColor: 'magenta',   //Color for crease lines
-  concaveColor: 'turqoise',
+  concaveColor: 'turquoise',
   lineWidth: 1   //Width for lines
 }
 
