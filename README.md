@@ -21,12 +21,10 @@ var orthogami = require('orthogami')
 
 //Set up options (can skip this if you like)
 var options = {
-  bounds: [300, 300],   //Page size
-  scale: 50,            //Size of each voxel face
-  colorMap: ['black', 'red', 'green', 'blue', 'yellow'], //Colors (can be a function)
-  convexColor: 'magenta',   //Color for crease lines
-  concaveColor: 'turquoise',
-  lineWidth: 1   //Width for lines
+  units: 'mm',            //Units
+  bounds: [210, 297],     //Page size
+  scale: 10,              //Size of voxel
+  lineWidth: 0.1          //Size of dashed line
 }
 
 //Then run orthogami
@@ -71,6 +69,7 @@ Generates an origami template for folding a model from the given voxel object.
     + `concaveColor` the color of the concave creases (default `'white'`)
     + `tabColor` the color of the tab lines (default `'black'`)
     + `lineWidth` the width of the crease lines (default `1`)
+    + `units` the units for the coordinate system (default `'px'`)
 
 **Returns** An array of SVG files encoding the pages of the origami printout
 

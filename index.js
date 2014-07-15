@@ -67,10 +67,14 @@ function orthogami(voxels, options) {
     bounds[i] = Math.floor(boxSize[i] / scale[i] - 2)
   }
 
+  //Units for the SVG files
+  var units       = options.units || "px"
+
   //Extract faces/normals from mesh
   var result      = getFaces(padded)
   var faces       = result[0]
   var normals     = result[1]
+
 
   //Compute topology
   var links       = getLinks(faces, normals)
@@ -93,5 +97,6 @@ function orthogami(voxels, options) {
   })
 
   //Pack pieces into sheets
-  return combinePieces(pieces, boxSize, scale)
+  return combinePieces(pieces, boxSize, scale, units)
 }
+

@@ -15,7 +15,9 @@
     "ndarray": "^1.0.15",
     "signum": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ndarray-pack": "^1.1.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
