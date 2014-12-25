@@ -1,8 +1,17 @@
 orthogami
 =========
-Voxel origami generator.  Works in node.js and browserify.
+
+Turn voxel models into foldable origami!  For example, you can turn this mario model:
+
+<img src="https://mikolalysenko.github.io/orthogami/example/mario.png">
+
+Into this foldable model:
 
 <img src="https://mikolalysenko.github.io/orthogami/example/mario.svg">
+
+[If you want to try making a Mario yourself, here is a PDF in A4 format.](https://mikolalysenko.github.io/orthogami/example/mario.pdf)
+
+This module works in any reasonable CommonJS environment (includes node.js and browserify).  You can also use it with the [voxel critter creator](http://voxelbuilder.com/edit.html) (select "Export Orthogami").
 
 ## Example usage
 
